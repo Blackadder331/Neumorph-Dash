@@ -1,7 +1,7 @@
 /*  clock */
-const hours = document.querySelector('.hours');
-const minutes = document.querySelector('.minutes');
-const seconds = document.querySelector('.seconds');
+// const hours = document.querySelector('.hours');
+// const minutes = document.querySelector('.minutes');
+// const seconds = document.querySelector('.seconds');
 
 /*  play button */
 const play = document.querySelector('.play');
@@ -16,29 +16,29 @@ const btn = document.querySelector('.slider__btn');
 const color = document.querySelector('.slider__color');
 const tooltip = document.querySelector('.slider__tooltip');
 
-clock = () => {
-  let today = new Date();
-  let h = (today.getHours() % 12) + today.getMinutes() / 59; // 22 % 12 = 10pm
-  let m = today.getMinutes(); // 0 - 59
-  let s = today.getSeconds(); // 0 - 59
+// clock = () => {
+//   let today = new Date();
+//   let h = (today.getHours() % 12) + today.getMinutes() / 59; // 22 % 12 = 10pm
+//   let m = today.getMinutes(); // 0 - 59
+//   let s = today.getSeconds(); // 0 - 59
 
-  h *= 30; // 12 * 30 = 360deg
-  m *= 6;
-  s *= 6; // 60 * 6 = 360deg
+//   h *= 30; // 12 * 30 = 360deg
+//   m *= 6;
+//   s *= 6; // 60 * 6 = 360deg
 
-  rotation(hours, h);
-  rotation(minutes, m);
-  rotation(seconds, s);
+//   rotation(hours, h);
+//   rotation(minutes, m);
+//   rotation(seconds, s);
 
-  // call every second
-  setTimeout(clock, 500);
-}
+//   // call every second
+//   setTimeout(clock, 500);
+// }
 
-rotation = (target, val) => {
-  target.style.transform =  `rotate(${val}deg)`;
-}
+// rotation = (target, val) => {
+//   target.style.transform =  `rotate(${val}deg)`;
+// }
 
-window.onload = clock();
+// window.onload = clock();
 
 dragElement = (target, btn) => {
   target.addEventListener('mousedown', (e) => {
